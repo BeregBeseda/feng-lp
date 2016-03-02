@@ -1,0 +1,10 @@
+%h1
+  Start form
+= form_for @apple, action: 'create' do |f|
+  = f.text_field :name
+  = f.submit 'Ok'    
+    
+- @apples.each do |apple|
+  %div
+    = "#{apple.name}"
+
